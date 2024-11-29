@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Button Styling</title>
+  <style>
+    /* 1. Select all <button> elements with a data-type="primary" attribute */
+    button[data-type="primary"] {
+      background-color: #4CAF50; /* Example background color */
+    }
+
+    /* 2. Ensure all buttons with class="cta" have bold text */
+    button.cta {
+      font-weight: bold;
+    }
+
+    /* 3. Use specificity to ensure buttons with both data-type="primary" and class="cta" */
+    button[data-type="primary"].cta {
+      background-color: #3A9F40; /* More specific color */
+      font-weight: bold; /* Ensure bold text */
+    }
+  </style>
+</head>
+<body>
+  <!-- Example buttons -->
+  <button data-type="primary">Primary Button</button>
+  <button class="cta">CTA Button</button>
+  <button data-type="primary" class="cta">Primary CTA Button</button>
+  <button>Regular Button</button>
+</body>
+</html>
